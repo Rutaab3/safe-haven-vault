@@ -115,7 +115,7 @@ export default function LockScreen() {
         </div>
 
         <div className={`space-y-4 ${shake ? "animate-shake" : ""}`}>
-          <div className="flex justify-center gap-2">
+          <div className="flex justify-center gap-2 cursor-text" onClick={() => inputRef.current?.focus()}>
             {Array.from({ length: 6 }).map((_, i) => {
               const val = step === "confirm" ? confirmPin : pin;
               return (
